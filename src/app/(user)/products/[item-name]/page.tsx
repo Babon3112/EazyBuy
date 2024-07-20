@@ -145,7 +145,7 @@ const ProductListPage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 mobile:grid-cols-2 laptop:grid-cols-4">
           {filteredProducts.map((product) => (
-            <div className="flex p-4">
+            <div className="flex p-4" key={product._id}>
               <Product product={product} key={product._id} />
             </div>
           ))}
