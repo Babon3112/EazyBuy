@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "img": "",
+    "title": "SUMMER SALE",
+    "desc": "DISCOVER THE LATEST TRENDS! ENJOY A FLAT 30% DISCOUNT ON NEW ARRIVALS.",
+    "bg": "#F5F5DC"
+  },
+  {
+    "id": 2,
+    "img": "",
+    "title": "MONSON SALE",
+    "desc": "REFRESH YOUR WARDROBE! GRAB A FLAT 30% DISCOUNT ON NEW ARRIVALS.",
+    "bg": "#F0FFFF"
+  },
+  {
+    "id": 3,
+    "img": "",
+    "title": "AUTUMN COLLECTION",
+    "desc": "EXPLORE COZY STYLES! ENJOY A FLAT 30% DISCOUNT ON NEW ARRIVALS.",
+    "bg": "#FFF5EE"
+  },
+  {
+    "id": 4,
+    "img": "",
+    "title": "WINTER COLLECTION",
+    "desc": "STAY WARM AND STYLISH! AVAIL A FLAT 30% DISCOUNT ON NEW ARRIVALS.",
+    "bg": "#FFDAB9"
+  },
+  {
+    "id": 5,
+    "img": "",
+    "title": "FESTIVE SALE",
+    "desc": "CELEBRATE IN STYLE! GRAB A FLAT 30% DISCOUNT ON NEW ARRIVALS.",
+    "bg": "#FFE4E1"
+  }
+]
