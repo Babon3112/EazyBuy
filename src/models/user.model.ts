@@ -7,57 +7,45 @@ export interface User extends Document {
   mobileno: string;
   email: string;
   password: string;
-  cartId: string;
-  wishlistId: string;
+  cartId?: string;
+  wishlistId?: string;
   isVerified: boolean;
   isAdmin: boolean;
-  verifyCode: string | undefined;
-  verifyCodeExpiry: Date | undefined;
-  forgotPasswordCode: string | undefined;
-  forgotPasswordCodeExpiry: Date | undefined;
+  verifyCode?: string;
+  verifyCodeExpiry?: Date;
+  forgotPasswordCode?: string;
+  forgotPasswordCodeExpiry?: Date;
 }
 
 const userSchema: Schema<User> = new Schema(
   {
     fullname: { type: String, required: true, trim: true },
-    avatar: {
-      type: String,
-      default: "",
-    },
+    avatar: { type: String, default: "" },
     username: {
       type: String,
+      required: true,
       trim: true,
       unique: true,
-      required: true,
       lowercase: true,
     },
-    mobileno: {
-      type: String,
-      trim: true,
-      unique: true,
-      required: true,
-    },
+    mobileno: { type: String, required: true, trim: true, unique: true },
     email: {
       type: String,
+      required: true,
       trim: true,
       unique: true,
-      required: true,
       lowercase: true,
-      match: [/.+\@.+\..+/, "please enter a valid email"],
+      match: [/.+\@.+\..+/, "Please enter a valid email"],
     },
-    password: { type: String, required: [true, "Password is required"] },
+    password: { type: String, required: true },
+    cartId: { type: Schema.Types.ObjectId, ref: "Cart" },
+    wishlistId: { type: Schema.Types.ObjectId, ref: "Wishlist" },
     isAdmin: { type: Boolean, default: false },
     isVerified: { type: Boolean, default: false },
     verifyCode: { type: String },
-    verifyCodeExpiry: {
-      type: Date,
-    },
-    forgotPasswordCode: {
-      type: String,
-    },
-    forgotPasswordCodeExpiry: {
-      type: Date,
-    },
+    verifyCodeExpiry: { type: Date },
+    forgotPasswordCode: { type: String },
+    forgotPasswordCodeExpiry: { type: Date },
   },
   { timestamps: true }
 );
