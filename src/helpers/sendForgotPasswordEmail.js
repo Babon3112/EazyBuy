@@ -30,7 +30,7 @@ export async function sendForgotPasswordEmail(
       port: 465,
       auth: {
         type: "OAuth2",
-        user: "arnabbabon2002@gmail.com",
+        user: "babonarnab@gmail.com",
         clientId,
         clientSecret,
         refreshToken,
@@ -39,7 +39,7 @@ export async function sendForgotPasswordEmail(
     });
 
     const mailOptions = {
-      from: "EazyBuy <arnabbabon2002@gmail.com>",
+      from: "EazyBuy <babonarnab@gmail.com>",
       to: email,
       subject: "EazyBuy | Forgot Password Code",
       text: `Please enter the following code to change your password:\n\n${forgotPasswordCode}\n\nOr copy and paste this url in your browser to reset email:${forgotPasswordUrl}\n\nThis code is valid only for 30 minutes.\n\nIf you did not request this code, please ignore this email.`,

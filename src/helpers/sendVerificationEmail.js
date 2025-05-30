@@ -31,7 +31,7 @@ export async function sendVerificationEmail(
       port: 465,
       auth: {
         type: "OAuth2",
-        user: "arnabbabon2002@gmail.com",
+        user: "babonarnab@gmail.com",
         clientId,
         clientSecret,
         refreshToken,
@@ -40,7 +40,7 @@ export async function sendVerificationEmail(
     });
 
     const mailOptions = {
-      from: "EazyBuy <arnabbabon2002@gmail.com>",
+      from: "EazyBuy <babonarnab@gmail.com>",
       to: email,
       subject: "EazyBuy | Verification Code",
       text: `Hello, ${username}\n\nThank you for registering. Please use the following verification code to complete your registration:\n\n${verifyCode}\n\nThis code is valid only for 1 hour.\n\nIf you did not request this code, please ignore this email.`,
